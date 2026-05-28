@@ -53,10 +53,12 @@
         /* 打印样式 */
         @media print {
             .toolbar { display: none !important; }
-            body { background: #fff; }
-            .resume { box-shadow: none; margin: 0; max-width: 100%; }
-            .sidebar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            body { background: #fff; margin: 0; }
+            .resume { box-shadow: none; margin: 0; max-width: 100%; display: flex !important; flex-direction: row !important; min-height: 100vh; }
+            .sidebar { -webkit-print-color-adjust: exact; print-color-adjust: exact; width: 260px !important; flex-shrink: 0 !important; }
+            .main { flex: 1 !important; }
             [contenteditable="true"]:hover, [contenteditable="true"]:focus { background: none; }
+            button { display: none !important; }
         }
         
         @media (max-width: 768px) {
