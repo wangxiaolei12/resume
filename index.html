@@ -32,8 +32,8 @@
         .sidebar a { color: #3498db; text-decoration: none; word-break: break-all; font-size: 11px; }
         
         /* 照片 */
-        .photo { width: 100px; height: 130px; border-radius: 4px; border: 2px solid #3498db; object-fit: cover; flex-shrink: 0; background: #ecf0f1; }
-        .photo-placeholder { width: 100px; height: 130px; border-radius: 4px; border: 2px dashed #3498db; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #ecf0f1; color: #7f8c8d; font-size: 12px; cursor: pointer; text-align: center; line-height: 1.4; }
+        .photo { width: 100px; height: 130px; border-radius: 4px; border: 2px solid #3498db; object-fit: cover; flex-shrink: 0; background: #ecf0f1; position: absolute; right: 0; top: 0; cursor: pointer; }
+        .photo-placeholder { width: 100px; height: 130px; border-radius: 4px; border: 2px dashed #3498db; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #ecf0f1; color: #7f8c8d; font-size: 12px; cursor: pointer; text-align: center; line-height: 1.4; position: absolute; right: 0; top: 0; }
 
         /* 右侧主内容 */
         .main { flex: 1; padding: 40px 35px; }
@@ -122,7 +122,7 @@
         <!-- 右侧主内容 -->
         <div class="main">
             <div style="position:relative;">
-                <div class="photo-placeholder" style="position:absolute; right:0; top:0;" onclick="uploadPhoto(this)">点击上传<br>照片</div>
+                <div class="photo-placeholder" onclick="uploadPhoto(this)">点击上传<br>照片</div>
                 <input type="file" id="photo-input" accept="image/*" style="display:none" onchange="handlePhoto(event)">
             </div>
 
@@ -240,12 +240,11 @@
             reader.onload = function(e) {
                 const placeholder = document.querySelector('.photo-placeholder');
                 const oldImg = document.querySelector('.photo');
-                const img = document.createElement('img');
-                img.className = 'photo';
-                img.src = e.target.result;
-                img.onclick = function() { document.getElementById('photo-input').click(); };
-                img.style.cursor = 'pointer';
                 if (placeholder) {
+                    const img = document.createElement('img');
+                    img.className = 'photo';
+                    img.src = e.target.result;
+                    img.onclick = function() { document.getElementById('photo-input').click(); };
                     placeholder.replaceWith(img);
                 } else if (oldImg) {
                     oldImg.src = e.target.result;
