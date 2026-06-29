@@ -180,8 +180,9 @@
             if (!file) return;
             const reader = new FileReader();
             reader.onload = function(e) {
-                const sidebar = document.querySelector('.sidebar');
-                const placeholder = sidebar.querySelector('.photo-placeholder');
+                const container = document.querySelector('.main');
+                const placeholder = container.querySelector('.photo-placeholder');
+                const oldImg = container.querySelector('.photo');
                 const img = document.createElement('img');
                 img.className = 'photo';
                 img.src = e.target.result;
@@ -189,9 +190,8 @@
                 img.style.cursor = 'pointer';
                 if (placeholder) {
                     placeholder.replaceWith(img);
-                } else {
-                    const oldImg = sidebar.querySelector('.photo');
-                    if (oldImg) oldImg.src = e.target.result;
+                } else if (oldImg) {
+                    oldImg.src = e.target.result;
                 }
             };
             reader.readAsDataURL(file);
@@ -243,7 +243,13 @@
             }
         }
 
-        // 草稿加载已禁用，避免覆盖页面结构
+        // 页面加载时自动加载草稿
+        window.addEventListener('load', function() {
+            const html = localStorage.getItem('resume_draft');
+            if (html) {
+                document.getElementById('resume').innerHTML = html;
+            }
+        });
     </script>
 </body>
 </html>
