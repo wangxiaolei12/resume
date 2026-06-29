@@ -22,8 +22,8 @@
         
         /* 左侧栏 */
         .sidebar { width: 280px; background: #2c3e50; color: #ecf0f1; padding: 40px 25px; flex-shrink: 0; }
-        .sidebar .photo { width: 120px; height: 120px; border-radius: 50%; border: 3px solid #3498db; object-fit: cover; display: block; margin: 0 auto 20px; background: #3d566e; }
-        .sidebar .photo-placeholder { width: 120px; height: 120px; border-radius: 50%; border: 3px solid #3498db; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; background: #3d566e; color: #bdc3c7; font-size: 12px; cursor: pointer; text-align: center; line-height: 1.4; }
+        .photo { width: 100px; height: 130px; border-radius: 4px; border: 2px solid #3498db; object-fit: cover; flex-shrink: 0; background: #ecf0f1; }
+        .photo-placeholder { width: 100px; height: 130px; border-radius: 4px; border: 2px dashed #3498db; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #ecf0f1; color: #7f8c8d; font-size: 12px; cursor: pointer; text-align: center; line-height: 1.4; }
         .sidebar .name { font-size: 24px; font-weight: bold; margin-bottom: 8px; color: #fff; }
         .sidebar .motto { font-size: 12px; color: #bdc3c7; margin-bottom: 30px; line-height: 1.6; }
         .sidebar h3 { font-size: 14px; color: #3498db; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid #3498db; }
@@ -83,8 +83,6 @@
     <div class="resume" id="resume">
         <!-- 左侧栏 -->
         <div class="sidebar">
-            <div class="photo-placeholder" onclick="uploadPhoto(this)">点击上传<br>照片</div>
-            <input type="file" id="photo-input" accept="image/*" style="display:none" onchange="handlePhoto(event)">
             <div class="name" contenteditable="true">你的姓名</div>
             <div class="motto" contenteditable="true">一句话介绍自己</div>
             
@@ -120,13 +118,17 @@
         
         <!-- 右侧主内容 -->
         <div class="main">
-            <div class="section">
-                <h2>求职意向</h2>
-                <div class="objective">
-                    <div class="item" contenteditable="true">目标职位</div>
-                    <div class="item" contenteditable="true">期望城市</div>
-                    <div class="item" contenteditable="true">到岗时间</div>
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:20px;">
+                <div class="section" style="margin-bottom:0;">
+                    <h2>求职意向</h2>
+                    <div class="objective">
+                        <div class="item" contenteditable="true">目标职位</div>
+                        <div class="item" contenteditable="true">期望城市</div>
+                        <div class="item" contenteditable="true">到岗时间</div>
+                    </div>
                 </div>
+                <div class="photo-placeholder" onclick="uploadPhoto(this)">点击上传<br>照片</div>
+                <input type="file" id="photo-input" accept="image/*" style="display:none" onchange="handlePhoto(event)">
             </div>
             
             <div class="section">
@@ -241,16 +243,7 @@
             }
         }
 
-        // 页面加载时自动加载草稿（保留照片区域）
-        window.addEventListener('load', function() {
-            const html = localStorage.getItem('resume_draft');
-            if (html && html.includes('photo')) {
-                document.getElementById('resume').innerHTML = html;
-            } else if (html) {
-                // 旧草稿没有照片区域，清除它
-                localStorage.removeItem('resume_draft');
-            }
-        });
+        // 草稿加载已禁用，避免覆盖页面结构
     </script>
 </body>
 </html>
