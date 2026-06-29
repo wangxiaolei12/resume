@@ -241,11 +241,14 @@
             }
         }
 
-        // 页面加载时自动加载草稿
+        // 页面加载时自动加载草稿（保留照片区域）
         window.addEventListener('load', function() {
             const html = localStorage.getItem('resume_draft');
-            if (html) {
+            if (html && html.includes('photo')) {
                 document.getElementById('resume').innerHTML = html;
+            } else if (html) {
+                // 旧草稿没有照片区域，清除它
+                localStorage.removeItem('resume_draft');
             }
         });
     </script>
