@@ -121,28 +121,28 @@
         
         <!-- 右侧主内容 -->
         <div class="main">
-            <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:20px;">
-                <div style="flex:1;">
-                    <h2 style="font-size:18px; color:#2c3e50; margin-bottom:15px; padding-bottom:8px; border-bottom:2px solid #3498db;">求职意向</h2>
-                    <div class="objective">
-                        <div class="item" contenteditable="true">Linux 内核工程师</div>
-                        <div class="item" contenteditable="true">北京</div>
-                        <div class="item" contenteditable="true">一个月内到岗</div>
-                    </div>
-                </div>
-                <div class="photo-placeholder" style="margin-top:35px;" onclick="uploadPhoto(this)">点击上传<br>照片</div>
-                <input type="file" id="photo-input" accept="image/*" style="display:none" onchange="handlePhoto(event)">
-            </div>
-            
             <div class="section">
-                <h2>教育背景</h2>
-                <div class="entry">
-                    <div class="entry-header">
-                        <span class="period" contenteditable="true">2012.09 - 2016.06</span>
-                        <span class="company" contenteditable="true">黑龙江科技大学</span>
-                    </div>
-                    <div class="entry-title" contenteditable="true">测控技术与仪器 / 本科</div>
+                <h2>求职意向</h2>
+                <div class="objective">
+                    <div class="item" contenteditable="true">Linux 内核工程师</div>
+                    <div class="item" contenteditable="true">北京</div>
+                    <div class="item" contenteditable="true">一个月内到岗</div>
                 </div>
+            </div>
+
+            <div style="display:flex; align-items:flex-start; justify-content:space-between;">
+                <div class="section" style="flex:1;">
+                    <h2>教育背景</h2>
+                    <div class="entry">
+                        <div class="entry-header">
+                            <span class="period" contenteditable="true">2012.09 - 2016.06</span>
+                            <span class="company" contenteditable="true">黑龙江科技大学</span>
+                        </div>
+                        <div class="entry-title" contenteditable="true">测控技术与仪器 / 本科</div>
+                    </div>
+                </div>
+                <div class="photo-placeholder" onclick="uploadPhoto(this)">点击上传<br>照片</div>
+                <input type="file" id="photo-input" accept="image/*" style="display:none" onchange="handlePhoto(event)">
             </div>
             
             <div class="section" id="work-section">
