@@ -32,8 +32,8 @@
         .sidebar a { color: #3498db; text-decoration: none; word-break: break-all; font-size: 11px; }
         
         /* 照片 */
-        .photo { width: 100px; height: 130px; border-radius: 4px; border: 2px solid #3498db; object-fit: cover; flex-shrink: 0; background: #ecf0f1; position: absolute; right: 0; top: 0; cursor: pointer; }
-        .photo-placeholder { width: 100px; height: 130px; border-radius: 4px; border: 2px dashed #3498db; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #ecf0f1; color: #7f8c8d; font-size: 12px; cursor: pointer; text-align: center; line-height: 1.4; position: absolute; right: 0; top: 0; }
+        .photo { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #3498db; object-fit: cover; display: block; margin: 0 auto 20px; background: #3d566e; cursor: pointer; }
+        .photo-placeholder { width: 110px; height: 110px; border-radius: 50%; border: 3px dashed #3498db; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; background: #3d566e; color: #bdc3c7; font-size: 12px; cursor: pointer; text-align: center; line-height: 1.4; }
 
         /* 右侧主内容 */
         .main { flex: 1; padding: 40px 35px; }
@@ -85,6 +85,8 @@
     <div class="resume" id="resume">
         <!-- 左侧栏 -->
         <div class="sidebar">
+            <div class="photo-placeholder" onclick="uploadPhoto(this)">点击上传<br>照片</div>
+            <input type="file" id="photo-input" accept="image/*" style="display:none" onchange="handlePhoto(event)">
             <div class="name" contenteditable="true">Xiaolei Wang</div>
             <div class="motto" contenteditable="true">世界属于那些勤于思考的人，更属于那些善于行动的人。</div>
             
@@ -121,11 +123,6 @@
         
         <!-- 右侧主内容 -->
         <div class="main">
-            <div style="position:relative;">
-                <div class="photo-placeholder" onclick="uploadPhoto(this)">点击上传<br>照片</div>
-                <input type="file" id="photo-input" accept="image/*" style="display:none" onchange="handlePhoto(event)">
-            </div>
-
             <div class="section">
                 <h2>求职意向</h2>
                 <div class="objective">
