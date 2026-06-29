@@ -22,6 +22,8 @@
         
         /* 左侧栏 */
         .sidebar { width: 280px; background: #2c3e50; color: #ecf0f1; padding: 40px 25px; flex-shrink: 0; }
+        .sidebar .photo { width: 120px; height: 120px; border-radius: 50%; border: 3px solid #3498db; object-fit: cover; display: block; margin: 0 auto 20px; background: #3d566e; }
+        .sidebar .photo-placeholder { width: 120px; height: 120px; border-radius: 50%; border: 3px solid #3498db; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; background: #3d566e; color: #bdc3c7; font-size: 12px; cursor: pointer; text-align: center; line-height: 1.4; }
         .sidebar .name { font-size: 24px; font-weight: bold; margin-bottom: 8px; color: #fff; }
         .sidebar .motto { font-size: 12px; color: #bdc3c7; margin-bottom: 30px; line-height: 1.6; }
         .sidebar h3 { font-size: 14px; color: #3498db; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid #3498db; }
@@ -81,6 +83,8 @@
     <div class="resume" id="resume">
         <!-- 左侧栏 -->
         <div class="sidebar">
+            <div class="photo-placeholder" onclick="uploadPhoto(this)">点击上传<br>照片</div>
+            <input type="file" id="photo-input" accept="image/*" style="display:none" onchange="handlePhoto(event)">
             <div class="name" contenteditable="true">你的姓名</div>
             <div class="motto" contenteditable="true">一句话介绍自己</div>
             
@@ -165,6 +169,32 @@
     </div>
 
     <script>
+        function uploadPhoto(el) {
+            document.getElementById('photo-input').click();
+        }
+
+        function handlePhoto(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const sidebar = document.querySelector('.sidebar');
+                const placeholder = sidebar.querySelector('.photo-placeholder');
+                const img = document.createElement('img');
+                img.className = 'photo';
+                img.src = e.target.result;
+                img.onclick = function() { document.getElementById('photo-input').click(); };
+                img.style.cursor = 'pointer';
+                if (placeholder) {
+                    placeholder.replaceWith(img);
+                } else {
+                    const oldImg = sidebar.querySelector('.photo');
+                    if (oldImg) oldImg.src = e.target.result;
+                }
+            };
+            reader.readAsDataURL(file);
+        }
+
         function addWork() {
             const section = document.getElementById('work-section');
             const entry = document.createElement('div');
