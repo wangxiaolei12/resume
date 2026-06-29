@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>简历</title>
+    <title>简历 - Xiaolei Wang</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif; background: #f0f2f5; color: #333; }
@@ -22,8 +22,6 @@
         
         /* 左侧栏 */
         .sidebar { width: 280px; background: #2c3e50; color: #ecf0f1; padding: 40px 25px; flex-shrink: 0; }
-        .photo { width: 100px; height: 130px; border-radius: 4px; border: 2px solid #3498db; object-fit: cover; flex-shrink: 0; background: #ecf0f1; }
-        .photo-placeholder { width: 100px; height: 130px; border-radius: 4px; border: 2px dashed #3498db; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #ecf0f1; color: #7f8c8d; font-size: 12px; cursor: pointer; text-align: center; line-height: 1.4; }
         .sidebar .name { font-size: 24px; font-weight: bold; margin-bottom: 8px; color: #fff; }
         .sidebar .motto { font-size: 12px; color: #bdc3c7; margin-bottom: 30px; line-height: 1.6; }
         .sidebar h3 { font-size: 14px; color: #3498db; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid #3498db; }
@@ -33,6 +31,10 @@
         .sidebar .skill-item { font-size: 12px; margin-bottom: 6px; line-height: 1.5; }
         .sidebar a { color: #3498db; text-decoration: none; word-break: break-all; font-size: 11px; }
         
+        /* 照片 */
+        .photo { width: 100px; height: 130px; border-radius: 4px; border: 2px solid #3498db; object-fit: cover; flex-shrink: 0; background: #ecf0f1; }
+        .photo-placeholder { width: 100px; height: 130px; border-radius: 4px; border: 2px dashed #3498db; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #ecf0f1; color: #7f8c8d; font-size: 12px; cursor: pointer; text-align: center; line-height: 1.4; }
+
         /* 右侧主内容 */
         .main { flex: 1; padding: 40px 35px; }
         .main h2 { font-size: 18px; color: #2c3e50; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 2px solid #3498db; }
@@ -83,35 +85,36 @@
     <div class="resume" id="resume">
         <!-- 左侧栏 -->
         <div class="sidebar">
-            <div class="name" contenteditable="true">你的姓名</div>
-            <div class="motto" contenteditable="true">一句话介绍自己</div>
+            <div class="name" contenteditable="true">Xiaolei Wang</div>
+            <div class="motto" contenteditable="true">世界属于那些勤于思考的人，更属于那些善于行动的人。</div>
             
             <div class="section">
                 <h3>基本信息</h3>
                 <div class="info-item"><span class="icon">👤</span><span contenteditable="true">男</span></div>
-                <div class="info-item"><span class="icon">🎂</span><span contenteditable="true">XX岁</span></div>
+                <div class="info-item"><span class="icon">🎂</span><span contenteditable="true">31岁</span></div>
                 <div class="info-item"><span class="icon">🎓</span><span contenteditable="true">本科</span></div>
-                <div class="info-item"><span class="icon">🏠</span><span contenteditable="true">城市</span></div>
-                <div class="info-item"><span class="icon">💼</span><span contenteditable="true">X年经验</span></div>
-                <div class="info-item"><span class="icon">📱</span><span contenteditable="true">手机号码</span></div>
-                <div class="info-item"><span class="icon">📧</span><span contenteditable="true">邮箱地址</span></div>
+                <div class="info-item"><span class="icon">💍</span><span contenteditable="true">已婚</span></div>
+                <div class="info-item"><span class="icon">🏠</span><span contenteditable="true">北京</span></div>
+                <div class="info-item"><span class="icon">💼</span><span contenteditable="true">8年经验</span></div>
+                <div class="info-item"><span class="icon">📱</span><span contenteditable="true">15711234776</span></div>
+                <div class="info-item"><span class="icon">📧</span><span contenteditable="true">xiaoleiwangxiaolei@gmail.com</span></div>
             </div>
             
             <div class="section">
                 <h3>个人技能</h3>
-                <div class="skill-item" contenteditable="true">• 技能1</div>
-                <div class="skill-item" contenteditable="true">• 技能2</div>
-                <div class="skill-item" contenteditable="true">• 技能3</div>
-                <div class="skill-item" contenteditable="true">• 技能4</div>
-                <div class="skill-item" contenteditable="true">• 技能5</div>
-                <div class="skill-item" contenteditable="true">• 技能6</div>
+                <div class="skill-item" contenteditable="true">• 熟悉 C，shell 编程语言，数据结构及其算法</div>
+                <div class="skill-item" contenteditable="true">• 熟悉 Linux 内核，内存管理，进程调度，网络协议栈</div>
+                <div class="skill-item" contenteditable="true">• 熟悉 KGDB，Kmemleak，crash，perf 等调试工具</div>
+                <div class="skill-item" contenteditable="true">• 熟悉 ARM 平台，BSP 开发</div>
+                <div class="skill-item" contenteditable="true">• 熟悉 V4L2/Media 子系统，Camera/ISP 开发</div>
+                <div class="skill-item" contenteditable="true">• 熟悉 Yocto 构建系统</div>
             </div>
 
             <div class="section">
-                <h3>链接</h3>
+                <h3>社区贡献</h3>
                 <div contenteditable="true" style="font-size:12px;">
-                    <div>GitHub: https://github.com/yourname</div>
-                    <div>Blog: https://yourblog.com</div>
+                    <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=grep&q=xiaolei.wang%40windriver.com">Linux Mainline Commits</a><br>
+                    <a href="https://git.yoctoproject.org/linux-yocto/log/?h=v6.6%2Fstandard%2Fnxp-sdk-6.6%2Fnxp-soc&qt=grep&q=xiaolei.wang%40windriver.com">Yocto linux-yocto Commits</a>
                 </div>
             </div>
         </div>
@@ -122,9 +125,9 @@
                 <div class="section" style="margin-bottom:0;">
                     <h2>求职意向</h2>
                     <div class="objective">
-                        <div class="item" contenteditable="true">目标职位</div>
-                        <div class="item" contenteditable="true">期望城市</div>
-                        <div class="item" contenteditable="true">到岗时间</div>
+                        <div class="item" contenteditable="true">Linux 内核工程师</div>
+                        <div class="item" contenteditable="true">北京</div>
+                        <div class="item" contenteditable="true">一个月内到岗</div>
                     </div>
                 </div>
                 <div class="photo-placeholder" onclick="uploadPhoto(this)">点击上传<br>照片</div>
@@ -135,10 +138,10 @@
                 <h2>教育背景</h2>
                 <div class="entry">
                     <div class="entry-header">
-                        <span class="period" contenteditable="true">20XX.09 - 20XX.06</span>
-                        <span class="company" contenteditable="true">学校名称</span>
+                        <span class="period" contenteditable="true">2012.09 - 2016.06</span>
+                        <span class="company" contenteditable="true">黑龙江科技大学</span>
                     </div>
-                    <div class="entry-title" contenteditable="true">专业 / 学历</div>
+                    <div class="entry-title" contenteditable="true">测控技术与仪器 / 本科</div>
                 </div>
             </div>
             
@@ -147,11 +150,29 @@
                 
                 <div class="entry">
                     <div class="entry-header">
-                        <span class="period" contenteditable="true">20XX.XX - 至今</span>
-                        <span class="company" contenteditable="true">公司名称</span>
+                        <span class="period" contenteditable="true">2019.09 - 至今</span>
+                        <span class="company" contenteditable="true">Wind River</span>
                     </div>
-                    <div class="entry-title" contenteditable="true">职位名称</div>
-                    <div class="entry-desc" contenteditable="true">工作描述：主要负责...</div>
+                    <div class="entry-title" contenteditable="true">Linux 内核开发</div>
+                    <div class="entry-desc" contenteditable="true">Linux内核开发，主要负责wrlinux系统开发及维护，基于NXP以及树梅派等平台，完成客户定制系统开发优化，参与维护yocto以及mainline社区</div>
+                </div>
+                
+                <div class="entry">
+                    <div class="entry-header">
+                        <span class="period" contenteditable="true">2018.08 - 2019.08</span>
+                        <span class="company" contenteditable="true">同有飞骥科技有限公司</span>
+                    </div>
+                    <div class="entry-title" contenteditable="true">存储系统工程师</div>
+                    <div class="entry-desc" contenteditable="true">主要负责NAS存储系统开发，包括BSP以及ZFS，NFS移植开发</div>
+                </div>
+                
+                <div class="entry">
+                    <div class="entry-header">
+                        <span class="period" contenteditable="true">2016.01 - 2018.07</span>
+                        <span class="company" contenteditable="true">凌云光技术集团</span>
+                    </div>
+                    <div class="entry-title" contenteditable="true">BSP开发工程师</div>
+                    <div class="entry-desc" contenteditable="true">负责网络设备光线路终端(OLT)开发，主要负责linux BSP开发调试，围绕switch, phy，光模块等驱动开发调试</div>
                 </div>
             </div>
             
@@ -160,11 +181,47 @@
                 
                 <div class="entry">
                     <div class="entry-header">
-                        <span class="period" contenteditable="true">20XX.XX - 20XX.XX</span>
-                        <span class="company" contenteditable="true">项目名称</span>
+                        <span class="period" contenteditable="true">2023.12 - 至今</span>
+                        <span class="company" contenteditable="true">wrlinux系统开发</span>
                     </div>
-                    <div class="entry-title" contenteditable="true">角色</div>
-                    <div class="entry-desc" contenteditable="true">项目描述：...</div>
+                    <div class="entry-title" contenteditable="true">项目负责人</div>
+                    <div class="entry-desc" contenteditable="true">基于LTS kernel 6.6版本在 wrlinux 上支持nxp-imx93平台并解决产品中存在的问题，包含Time-Networking(TSN)中 Qav,Qbv,Qbu,PTP时钟同步，GPU，VPU等feature，解决mainline上：GPU异常，早期slab内存分配存在的内存泄漏，系统suspend出现crash，kmemleak模块trace丢失问题，优化Qav配置下发问题</div>
+                </div>
+                
+                <div class="entry">
+                    <div class="entry-header">
+                        <span class="period" contenteditable="true">2021.11 - 2023.11</span>
+                        <span class="company" contenteditable="true">wrlinux系统开发</span>
+                    </div>
+                    <div class="entry-title" contenteditable="true">项目负责人</div>
+                    <div class="entry-desc" contenteditable="true">基于LTS kernel 5.15, kernel 6.1版本，将nxp-imx8mp，nxp-imx8mq硬件平台开发VPU，GPU，M-core等feature，并解决产品中存在的问题，解决mainline上：网卡mac和phy设备在系统suspend/resume出现不同步情况，wm8962寄存器易失性状态位和非易失性控制位混合导致error问题，死锁问题等，参与主线社区开发维护</div>
+                </div>
+                
+                <div class="entry">
+                    <div class="entry-header">
+                        <span class="period" contenteditable="true">2019.10 - 2021.10</span>
+                        <span class="company" contenteditable="true">wrlinux系统开发</span>
+                    </div>
+                    <div class="entry-title" contenteditable="true">项目负责人</div>
+                    <div class="entry-desc" contenteditable="true">基于mainline上的LTS版本kernel，将 nxp-imx6q, nxp-imx8qm, ti-am335x 硬件平台所有feature支持到最新的LTS kernel并解决产品中存在的问题，涉及storage，DRM，camera，machine learning等相关特性支持，解决WR Linux系统测试出现的问题包括优化MMC trim Performance，运行Kdump出现crash，运行系统suspend出现crash等问题定位解决</div>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-header">
+                        <span class="period" contenteditable="true">2018.09 - 2019.08</span>
+                        <span class="company" contenteditable="true">NAS存储系统开发</span>
+                    </div>
+                    <div class="entry-title" contenteditable="true">项目负责人</div>
+                    <div class="entry-desc" contenteditable="true">存储系统底层开发，搭建CIFS和NFS以及FTP和HTTPD服务，通过网络映射挂载存储端的共享目录，负责存储系统底层开发，基于netlink的双控同步机制代码编写以及zfs,nfs,CIFS包移植</div>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-header">
+                        <span class="period" contenteditable="true">2016.01 - 2018.08</span>
+                        <span class="company" contenteditable="true">OLT光线路终端开发</span>
+                    </div>
+                    <div class="entry-title" contenteditable="true">项目负责人</div>
+                    <div class="entry-desc" contenteditable="true">野外盒式OLT及机架式OLT开发，主要负责Linux和VxWorks底层驱动开发，BSP移植，双boot开发，光模块和电模块驱动代码编写，10G口和1G口自适应协商配置，多板卡板间通信机制代码编写，在线更新CPLD程序开发</div>
                 </div>
             </div>
         </div>
@@ -180,9 +237,8 @@
             if (!file) return;
             const reader = new FileReader();
             reader.onload = function(e) {
-                const container = document.querySelector('.main');
-                const placeholder = container.querySelector('.photo-placeholder');
-                const oldImg = container.querySelector('.photo');
+                const placeholder = document.querySelector('.photo-placeholder');
+                const oldImg = document.querySelector('.photo');
                 const img = document.createElement('img');
                 img.className = 'photo';
                 img.src = e.target.result;
